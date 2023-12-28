@@ -8,7 +8,7 @@ class SubScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
             appBar: AppBar(
                 automaticallyImplyLeading: false,
@@ -32,18 +32,22 @@ class SubScreen extends StatelessWidget {
                     Tab(
                       text: 'Tab 3',
                     ),
+                    Tab(
+                      text: 'Tab 4',
+                    ),
                   ],
                 )),
             body: TabBarView(
               children: [
-                Center(
-                  child: Text('Tab 1 Content'),
-                ),
+                AppBar(title: Text('asd'), automaticallyImplyLeading: false,),
                 Center(
                   child: Text('Tab 2 Content'),
                 ),
                 Center(
                   child: Text('Tab 3 Content'),
+                ),
+                Center(
+                  child: Text('Tab 4 Content'),
                 ),
               ],
             )));
